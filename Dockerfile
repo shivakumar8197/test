@@ -17,5 +17,5 @@ RUN cp -r vinayproject-master/* /var/www/html/
 
 EXPOSE 80
 
-CMD ["apachectl", "-D", "FOREGROUND1"]
+CMD ["apachectl", "-D", "FOREGROUND"]
 
