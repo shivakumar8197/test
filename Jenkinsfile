@@ -20,13 +20,5 @@ pipeline {
                   sh "docker run -d -p 8585:9090 my-app-1.0"
             }
         }
-        stage('docker image push') { 
-            steps {
-                  withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerhub')]) {
-                  sh "docker login -u shivakumar8197 -p ${dockerhub}"
-}
-                  sh "docker push shivakumar8197/my-app-1.0"
-            }
-        }
     }
 }
